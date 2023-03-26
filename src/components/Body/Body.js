@@ -34,10 +34,23 @@ const skillsList = [
 ];
 
 function Body(props) {
+  const [blogs, setBlogs] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get(
+        "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@abdulaahadaazar"
+      )
+      .then((res) => {
+        console.log(res);
+        setBlogs(res.data.items);
+      });
+  }, []);
+
   return (
     <div className={"w-full h-full flex-1 p-[10px] overflow-y-auto"}>
-      <p className="text-xl text-center mb-[30px]">
-        Hi! I'm Aahad. I'm working Software Engineer at <b>Sudofy</b>.
+      <p className="text-xl text-center mb-[10px]">
+        Hi! I'm Aahad. I'm working as Software Engineer at <b>Sudofy</b>.
         <br />I help elevate startups from <b>Engineering</b>, <b>Data</b> and{" "}
         <b>Product</b> perspective
       </p>
@@ -70,11 +83,17 @@ function Body(props) {
       <h2 className={`text-xl underline`}>
         <b>Blogs</b>
       </h2>
-      <div className="mb-[20px] mt-[10px]">
-        <span className="text-[#8b8b8b]">
-          <b>Coming soon!</b>
-        </span>
-      </div>
+      {blogs.map((o) => {
+        return (
+          <div key={o.title} className="mb-[20px] mt-[10px]">
+            <a href={o.link.split("?")[0]} target="_blank">
+              <span className="text-[#8b8b8b]">
+                <b>{o.title}</b>
+              </span>
+            </a>
+          </div>
+        );
+      })}
     </div>
   );
 }
