@@ -30,7 +30,13 @@ function Subheader(props) {
       {links.map((o) => {
         return (
           <a className="mx-[5px]" key={o.title} href={o.link} target="_blank">
-            <Image src={o.icon} width={20} height={20} alt={o.title} />
+            <Image
+              className="icon"
+              src={o.icon}
+              width={20}
+              height={20}
+              alt={o.title}
+            />
           </a>
         );
       })}
