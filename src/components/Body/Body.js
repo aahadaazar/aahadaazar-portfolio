@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 const workExperienceList = [
   {
     title: "Sudofy",
-    description: "Software Engineer (July 2022 - Present)",
+    description: "Software Engineer (July 2022 - May 2023)",
   },
   {
     title: "Sudofy",
