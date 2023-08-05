@@ -2,7 +2,7 @@ import Head from "next/head";
 import { Nunito_Sans } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import Header from "@/components/Header";
-import Body from "@/components/Body/Body";
+import Body from "@/components/Body";
 import Subheader from "@/components/Subheader";
 
 const Kaisei = Nunito_Sans({

@@ -3,6 +3,10 @@ import React, { useEffect, useState } from "react";
 
 const workExperienceList = [
   {
+    title: "Chikoo",
+    description: "Senior Software Engineer (May 2023 - Present)",
+  },
+  {
     title: "Sudofy",
     description: "Software Engineer (July 2022 - May 2023)",
   },
@@ -20,7 +24,7 @@ const skillsList = [
   {
     title: "Frontend",
     description:
-      "NextJs, React, Redux, Redux Toolkit, GraphQL, JavaScript, Webflow, Material UI, Ant Design, Storybooks, Apex Charts, SASS, CSS",
+      "NextJs, React, Redux, Redux Toolkit, GraphQL, ApolloQL, JavaScript, Webflow, Material UI, Ant Design, Tailwind, Storybooks, Apex Charts, SASS, CSS",
   },
   {
     title: "Backend",
@@ -33,7 +37,7 @@ const skillsList = [
   },
 ];
 
-function Body(props) {
+function Body() {
   const [blogs, setBlogs] = useState([]);
 
   useEffect(() => {
@@ -49,7 +53,7 @@ function Body(props) {
   return (
     <div className={"w-full h-full flex-1 p-[10px] overflow-y-auto"}>
       <p className="text-xl text-center mb-[10px]">
-        Hi! I'm Aahad. I'm working as Software Engineer at <b>Sudofy</b>.
+        Hi! I'm Aahad. I'm working as Senior Software Engineer at <b>Chikoo</b>.
         <br />I help elevate startups from <b>Engineering</b>, <b>Data</b> and{" "}
         <b>Product</b> perspective
       </p>
