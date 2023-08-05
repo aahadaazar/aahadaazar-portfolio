@@ -52,7 +52,7 @@ function Body() {
 
   return (
     <div className={"w-full h-full flex-1 p-[10px] overflow-y-auto"}>
-      <p className="text-xl text-center mb-[10px]">
+      <p className="text-xl text-center mb-[30px]">
         Hi! I'm Aahad. I'm working as Senior Software Engineer at <b>Chikoo</b>.
         <br />I help elevate startups from <b>Engineering</b>, <b>Data</b> and{" "}
         <b>Product</b> perspective
