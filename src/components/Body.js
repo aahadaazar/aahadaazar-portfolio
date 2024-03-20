@@ -3,8 +3,12 @@ import React, { useEffect, useState } from "react";
 
 const workExperienceList = [
   {
+    title: "Scalers",
+    description: "Software Engineer (October 2023 - Present)",
+  },
+  {
     title: "Chikoo",
-    description: "Senior Software Engineer (May 2023 - Present)",
+    description: "Senior Software Engineer (May 2023 - October 2023)",
   },
   {
     title: "Sudofy",
@@ -28,7 +32,7 @@ const skillsList = [
   },
   {
     title: "Backend",
-    description: "NodeJs, NestJs",
+    description: "NodeJs, NestJs, Python, Django, Postgres, AWS",
   },
   {
     title: "Data Analytics",
@@ -63,7 +67,7 @@ function Body() {
       {workExperienceList.map((o, index) => {
         return (
           <div key={`${index}-${o.title}`} className="mb-[20px] mt-[10px]">
-            <span className="text-[#8b8b8b]">
+            <span className="text-[#5d5d5d]">
               <b>{o.title}</b>
             </span>
             <p className="mt-[3px]">{o.description}</p>
@@ -76,7 +80,7 @@ function Body() {
       {skillsList.map((o) => {
         return (
           <div key={o.title} className="mb-[20px] mt-[10px]">
-            <span className="text-[#8b8b8b]">
+            <span className="text-[#5d5d5d]">
               <b>{o.title}</b>
             </span>
             <p className="mt-[3px]">{o.description}</p>
@@ -90,7 +94,7 @@ function Body() {
         return (
           <div key={o.title} className="mb-[20px] mt-[10px]">
             <a href={o.link.split("?")[0]} target="_blank">
-              <span className="text-[#8b8b8b]">
+              <span className="text-[#5d5d5d]">
                 <b>{o.title}</b>
               </span>
             </a>
