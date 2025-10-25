@@ -32,7 +32,7 @@ const skillsList = [
   },
   {
     title: "Backend",
-    description: "NodeJs, NestJs, Python, Django, Postgres, AWS",
+    description: "NodeJs, NestJs, Python, Django, Postgres, AWS, FastAPI",
   },
   {
     title: "Data Analytics",
@@ -55,11 +55,12 @@ function Body() {
   }, []);
 
   return (
-    <div className={"w-full h-full flex-1 p-[10px] overflow-y-auto"}>
+    <div className={"w-full h-full flex-1 p-[10px] overflow-y-auto main-body"}>
       <p className="text-xl text-center mb-[30px]">
-        Hi! I'm Aahad. I'm working as Senior Software Engineer at <b>Chikoo</b>.
+        Hi! I'm Aahad. I'm working as Senior Software Engineer at <b>Scalers</b>
+        .
         <br />I help elevate startups from <b>Engineering</b>, <b>Data</b> and{" "}
-        <b>Product</b> perspective
+        <b>AI</b> perspective
       </p>
       <h2 className={`text-xl underline`}>
         <b>Work Experience</b>
