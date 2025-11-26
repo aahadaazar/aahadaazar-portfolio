@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e293b;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="beam" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ec4899;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)" />
+  
+  <!-- Documents Stack -->
+  <rect x="250" y="150" width="150" height="200" rx="5" fill="#1e293b" stroke="#475569" stroke-width="2" transform="rotate(-10 325 250)" />
+  <rect x="280" y="150" width="150" height="200" rx="5" fill="#1e293b" stroke="#475569" stroke-width="2" transform="rotate(5 355 250)" />
+  
+  <!-- Scanning Beam -->
+  <rect x="200" y="200" width="400" height="4" fill="url(#beam)" opacity="0.8">
+    <animate attributeName="y" values="150;350;150" duration="3s" repeatCount="indefinite" />
+  </rect>
+  
+  <!-- Summary Card -->
+  <rect x="500" y="120" width="180" height="120" rx="8" fill="#0f172a" stroke="url(#beam)" stroke-width="2" />
+  <line x1="520" y1="150" x2="660" y2="150" stroke="#94a3b8" stroke-width="2" />
+  <line x1="520" y1="170" x2="640" y2="170" stroke="#94a3b8" stroke-width="2" />
+  <line x1="520" y1="190" x2="600" y2="190" stroke="#94a3b8" stroke-width="2" />
+  
+  <text x="400" y="400" font-family="monospace" font-size="24" fill="#94a3b8" text-anchor="middle">Smart Note Summarizer</text>
+</svg>

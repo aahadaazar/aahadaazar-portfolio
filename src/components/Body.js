@@ -1,7 +1,8 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
-import { Terminal, Code2, BookOpen, Briefcase, Cpu, BrainCircuit } from "lucide-react";
+import { Terminal, Code2, BookOpen, Briefcase, Cpu, BrainCircuit, Rocket } from "lucide-react";
 
 const workExperienceList = [
   {
@@ -27,6 +28,30 @@ const workExperienceList = [
     role: "Associate Software Engineer",
     period: "May 2018 - June 2022",
     description: "Started as an intern and grew into a key engineering role.",
+  },
+];
+
+const projectsList = [
+  {
+    title: "DevConnect",
+    role: "Full-Stack Developer",
+    tech: ["React", "Next.js", "Django", "Postgres", "GraphQL", "Material UI"],
+    description: "Built a developer collaboration platform enabling users to connect, share portfolios, and form teams.",
+    image: "/projects/devconnect.svg",
+  },
+  {
+    title: "Student Guidance AI Chat Agent",
+    role: "Full-Stack Developer",
+    tech: ["FastAPI", "Gradio", "OpenAI", "Guardrails", "JSON Prompting"],
+    description: "Designed and deployed a conversational career guidance system using FastAPI and Gradio, integrating structured LLM prompting with guardrails to prevent hallucination and ensure reliable recommendations.",
+    image: "/projects/student-ai.svg",
+  },
+  {
+    title: "Smart Note Summarizer + Semantic Search",
+    role: "Full-Stack Developer",
+    tech: ["React", "FastAPI", "Ollama", "Supabase", "Pinecone", "Docker"],
+    description: "Implemented a FastAPI backend integrating LLMs through Ollama to distill notes and produce topic tags, reducing manual tagging efforts by 70% and accelerating data organization.",
+    image: "/projects/smart-notes.svg",
   },
 ];
 
@@ -165,6 +190,64 @@ function Body() {
               </div>
             );
           })}
+        </div>
+      </motion.section>
+
+      {/* Projects Section */}
+      <motion.section variants={itemVariants}>
+        <div className="flex items-center gap-3 mb-8">
+          <Rocket className="text-fuchsia-400" />
+          <h2 className="text-2xl font-bold text-white">Featured Projects</h2>
+          <div className="h-px bg-slate-800 flex-1" />
+        </div>
+        <div className="grid gap-8">
+          {projectsList.map((project, index) => (
+            <motion.div
+              key={index}
+              whileHover={{ scale: 1.02 }}
+              className="group relative bg-slate-900/50 border border-slate-800 rounded-xl overflow-hidden hover:border-fuchsia-500/50 transition-all"
+            >
+              <div className="flex flex-col md:flex-row h-full">
+                {/* Image Container */}
+                <div className="relative w-full md:w-2/5 h-56 md:h-auto overflow-hidden">
+                  <div className="absolute inset-0 bg-slate-900/20 z-10 group-hover:bg-transparent transition-colors duration-300" />
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+
+                {/* Content Container */}
+                <div className="flex-1 p-6 flex flex-col justify-center">
+                  <div className="flex flex-col mb-2">
+                    <h3 className="text-xl font-bold text-slate-100 group-hover:text-fuchsia-400 transition-colors">
+                      {project.title}
+                    </h3>
+                    <span className="text-xs font-mono text-fuchsia-400 mt-1">
+                      {project.role}
+                    </span>
+                  </div>
+
+                  <p className="text-slate-400 text-sm mb-4 leading-relaxed">
+                    {project.description}
+                  </p>
+
+                  <div className="flex flex-wrap gap-2 mt-auto">
+                    {project.tech.map((t) => (
+                      <span
+                        key={t}
+                        className="px-2 py-1 text-xs font-mono rounded bg-slate-800/80 text-slate-300 border border-slate-700/50 group-hover:border-fuchsia-500/30 transition-colors"
+                      >
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          ))}
         </div>
       </motion.section>
 
