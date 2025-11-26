@@ -1,45 +1,81 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import { Terminal, Code2, BookOpen, Briefcase, Cpu, BrainCircuit } from "lucide-react";
 
 const workExperienceList = [
   {
     title: "Scalers",
-    description: "Software Engineer (October 2023 - Present)",
+    role: "Software Engineer",
+    period: "Oct 2023 - Present",
+    description: "Driving engineering excellence and building scalable solutions for startups.",
   },
   {
     title: "Chikoo",
-    description: "Senior Software Engineer (May 2023 - October 2023)",
+    role: "Senior Software Engineer",
+    period: "May 2023 - Oct 2023",
+    description: "Led development initiatives and optimized core platform performance.",
   },
   {
     title: "Sudofy",
-    description: "Software Engineer (July 2022 - May 2023)",
+    role: "Software Engineer",
+    period: "July 2022 - May 2023",
+    description: "Full-stack development delivering robust applications for diverse clients.",
   },
   {
     title: "Sudofy",
-    description: "Associate Software Engineer (May 2018 - June 2022)",
-  },
-  {
-    title: "Sudofy",
-    description: "Intern (Feb 2018 - Apr 2018)",
+    role: "Associate Software Engineer",
+    period: "May 2018 - June 2022",
+    description: "Started as an intern and grew into a key engineering role.",
   },
 ];
 
 const skillsList = [
   {
-    title: "Frontend",
-    description:
-      "NextJs, React, Redux, Redux Toolkit, GraphQL, ApolloQL, JavaScript, Webflow, Material UI, Ant Design, Tailwind, Storybooks, Apex Charts, SASS, CSS",
+    category: "Frontend",
+    icon: Code2,
+    items: ["JavaScript", "Next.js", "React", "Redux", "GraphQL", "Tailwind", "TypeScript", "Material UI"],
   },
   {
-    title: "Backend",
-    description: "NodeJs, NestJs, Python, Django, Postgres, AWS, FastAPI",
+    category: "Backend",
+    icon: Terminal,
+    items: ["Node.js", "NestJS", "Python", "FastAPI", "Django", "PostgreSQL", "Supabase", "AWS"],
   },
   {
-    title: "Data Analytics",
-    description:
-      "Power BI, SQL, Python, AWS Quicksight, AWS Athena, Tableau, Google Data Studio, Google Optimize, Google Analytics, Hubspot Analytics",
+    category: "AI Engineering",
+    icon: BrainCircuit,
+    items: [
+      "Google ADK",
+      "OpenAI SDK",
+      "Ollama",
+      "Pinecone",
+      "LangChain",
+      "Hugging Face",
+      "LlamaIndex",
+      "Vercel AI SDK"
+    ],
+  },
+  {
+    category: "Data & Analytics",
+    icon: Cpu,
+    items: ["Power BI", "SQL", "Python", "AWS Athena", "Tableau", "Google Analytics"],
   },
 ];
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 },
+};
 
 function Body() {
   const [blogs, setBlogs] = useState([]);
@@ -55,54 +91,112 @@ function Body() {
   }, []);
 
   return (
-    <div className={"w-full h-full flex-1 p-[10px] overflow-y-auto main-body"}>
-      <p className="text-xl text-center mb-[30px]">
-        Hi! I'm Aahad. I'm working as Senior Software Engineer at <b>Scalers</b>
-        .
-        <br />I help elevate startups from <b>Engineering</b>, <b>Data</b> and{" "}
-        <b>AI</b> perspective
-      </p>
-      <h2 className={`text-xl underline`}>
-        <b>Work Experience</b>
-      </h2>
-      {workExperienceList.map((o, index) => {
-        return (
-          <div key={`${index}-${o.title}`} className="mb-[20px] mt-[10px]">
-            <span className="text-[#5d5d5d]">
-              <b>{o.title}</b>
-            </span>
-            <p className="mt-[3px]">{o.description}</p>
-          </div>
-        );
-      })}
-      <h2 className={`text-xl underline`}>
-        <b>Skills</b>
-      </h2>
-      {skillsList.map((o) => {
-        return (
-          <div key={o.title} className="mb-[20px] mt-[10px]">
-            <span className="text-[#5d5d5d]">
-              <b>{o.title}</b>
-            </span>
-            <p className="mt-[3px]">{o.description}</p>
-          </div>
-        );
-      })}
-      <h2 className={`text-xl underline`}>
-        <b>Blogs</b>
-      </h2>
-      {blogs.map((o) => {
-        return (
-          <div key={o.title} className="mb-[20px] mt-[10px]">
-            <a href={o.link.split("?")[0]} target="_blank">
-              <span className="text-[#5d5d5d]">
-                <b>{o.title}</b>
-              </span>
-            </a>
-          </div>
-        );
-      })}
-    </div>
+    <motion.div
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+      className="w-full flex-1 flex flex-col gap-16 pb-20"
+    >
+      {/* Intro Section */}
+      <motion.section variants={itemVariants} className="text-center max-w-2xl mx-auto">
+        <p className="text-lg md:text-xl text-slate-300 leading-relaxed">
+          Hi! I'm <span className="text-cyan-400 font-bold">Aahad</span>. I'm currently a Senior Software Engineer at{" "}
+          <span className="font-bold text-white">Scalers</span>.
+          <br />
+          I specialize in elevating startups through <span className="text-violet-400 font-mono">Engineering</span>,{" "}
+          <span className="text-cyan-400 font-mono">AI</span>, and <span className="text-emerald-400 font-mono">Data</span>.
+        </p>
+      </motion.section>
+
+      {/* Experience Section */}
+      <motion.section variants={itemVariants}>
+        <div className="flex items-center gap-3 mb-8">
+          <Briefcase className="text-cyan-400" />
+          <h2 className="text-2xl font-bold text-white">Experience</h2>
+          <div className="h-px bg-slate-800 flex-1" />
+        </div>
+        <div className="grid gap-6">
+          {workExperienceList.map((job, index) => (
+            <motion.div
+              key={index}
+              whileHover={{ scale: 1.01 }}
+              className="group relative bg-slate-900/50 border border-slate-800 rounded-lg p-6 hover:border-cyan-500/50 transition-colors overflow-hidden"
+            >
+              <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-cyan-500 to-violet-500 opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                <h3 className="text-xl font-bold text-slate-100 group-hover:text-cyan-400 transition-colors">
+                  {job.title}
+                </h3>
+                <span className="text-sm font-mono text-slate-500">{job.period}</span>
+              </div>
+              <p className="text-slate-400 font-medium mb-2">{job.role}</p>
+              <p className="text-slate-500 text-sm">{job.description}</p>
+            </motion.div>
+          ))}
+        </div>
+      </motion.section>
+
+      {/* Skills Section */}
+      <motion.section variants={itemVariants}>
+        <div className="flex items-center gap-3 mb-8">
+          <Cpu className="text-violet-400" />
+          <h2 className="text-2xl font-bold text-white">Tech Stack</h2>
+          <div className="h-px bg-slate-800 flex-1" />
+        </div>
+        <div className="grid md:grid-cols-2 gap-6">
+          {skillsList.map((skillGroup) => {
+            const Icon = skillGroup.icon;
+            return (
+              <div key={skillGroup.category} className="bg-slate-900/30 border border-slate-800 rounded-xl p-6">
+                <div className="flex items-center gap-2 mb-4 text-slate-200">
+                  <Icon size={20} className="text-violet-400" />
+                  <h3 className="font-bold">{skillGroup.category}</h3>
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {skillGroup.items.map((skill) => (
+                    <span
+                      key={skill}
+                      className="px-3 py-1 text-xs font-mono rounded-full bg-slate-800 text-slate-300 border border-slate-700 hover:border-violet-500/50 hover:text-white transition-colors cursor-default"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </motion.section>
+
+      {/* Blogs Section */}
+      <motion.section variants={itemVariants}>
+        <div className="flex items-center gap-3 mb-8">
+          <BookOpen className="text-emerald-400" />
+          <h2 className="text-2xl font-bold text-white">Latest Writing</h2>
+          <div className="h-px bg-slate-800 flex-1" />
+        </div>
+        <div className="grid md:grid-cols-2 gap-6">
+          {blogs.map((blog) => (
+            <motion.a
+              key={blog.title}
+              href={blog.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ y: -5 }}
+              className="block bg-slate-900/50 border border-slate-800 rounded-xl p-6 hover:border-emerald-500/50 transition-all group"
+            >
+              <h3 className="text-lg font-bold text-slate-200 mb-2 group-hover:text-emerald-400 transition-colors line-clamp-2">
+                {blog.title}
+              </h3>
+              <div className="flex items-center gap-2 text-xs text-slate-500 font-mono mt-4">
+                <span>Read on Medium</span>
+                <span>→</span>
+              </div>
+            </motion.a>
+          ))}
+        </div>
+      </motion.section>
+    </motion.div>
   );
 }
 
