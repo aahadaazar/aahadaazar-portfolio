@@ -21,19 +21,16 @@ export default function Home() {
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
       </Head>
       <main
-        className={`${inter.variable} ${firaCode.variable} font-sans min-h-screen bg-slate-950 text-slate-200 selection:bg-cyan-500/30`}
+        className={`${inter.variable} ${firaCode.variable} font-sans min-h-screen bg-paper text-ink selection:bg-accent/30 overflow-x-hidden`}
       >
-        <div className="max-w-4xl mx-auto px-4 py-12 flex flex-col min-h-screen">
-          <Header />
-          <Subheader />
+        <div className="max-w-5xl mx-auto px-4 py-12 flex flex-col min-h-screen relative z-10">
+          <header className="hero-fixed mb-12 flex flex-col items-center justify-center reveal" style={{ '--i': 0 }}>
+            <Header />
+            <Subheader />
+          </header>
+          
           <Body />
           <ChatWidget />
-        </div>
-        
-        {/* Background decorative elements */}
-        <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
-            <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-cyan-500/10 rounded-full blur-[100px]" />
-            <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-violet-500/10 rounded-full blur-[100px]" />
         </div>
       </main>
     </>

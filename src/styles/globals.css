@@ -2,11 +2,119 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Hallmark · genre: modern-minimal · macrostructure: Bento Grid · theme: Almanac · enrichment: None · nav: N5 · footer: Ft2 */
 :root {
-  --foreground-rgb: 226, 232, 240; /* Slate 200 */
-  --background-rgb: 15, 23, 42; /* Slate 950 */
-  --accent-cyan: 6, 182, 212; /* Cyan 500 */
-  --accent-violet: 139, 92, 246; /* Violet 500 */
+  /* ALMANAC THEME (Cool pale paper · slate accent) */
+  --color-paper:    oklch(94%  0.008 245);
+  --color-paper-2:  oklch(91%  0.010 245);
+  --color-paper-3:  oklch(86%  0.012 240);
+  --color-rule:     oklch(74%  0.012 240);
+  --color-rule-2:   oklch(38%  0.018 240);
+  --color-muted:    oklch(46%  0.014 245);
+  --color-neutral:  oklch(28%  0.016 245);
+  --color-ink-2:    oklch(20%  0.018 245);
+  --color-ink:      oklch(16%  0.020 245);
+  --color-accent:   oklch(38%  0.135 250);
+  --color-accent-ink: oklch(40% 0.13 250);
+  --color-focus:    oklch(38%  0.135 250);
+  
+  /* Hallmark Motion Disciplines */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-micro: 120ms;
+  --dur-short: 220ms;
+  --dur-long: 420ms;
+  
+  /* Hallmark Spacing/Grid */
+  --gap-bento: 16px;
+}
+
+[data-theme="dark"] {
+  /* ALMANAC THEME (Dark Mode Variant) */
+  --color-paper:    oklch(14%  0.008 245);
+  --color-paper-2:  oklch(18%  0.010 245);
+  --color-paper-3:  oklch(22%  0.012 245);
+  --color-rule:     oklch(32%  0.012 245);
+  --color-rule-2:   oklch(45%  0.010 245);
+  --color-muted:    oklch(60%  0.010 245);
+  --color-neutral:  oklch(75%  0.008 245);
+  --color-ink-2:    oklch(85%  0.006 245);
+  --color-ink:      oklch(94%  0.006 245);
+  --color-accent:   oklch(48%  0.115 250);
+  --color-accent-ink: oklch(48% 0.115 250);
+  --color-focus:    oklch(48%  0.115 250);
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  overflow-x: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 150ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 150ms !important;
+  }
+  .reveal { animation: reveal-reduced 150ms linear forwards !important; }
+}
+
+@keyframes reveal {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes reveal-reduced {
+  to { opacity: 1; transform: none; }
+}
+
+.reveal {
+  opacity: 0;
+  animation: reveal var(--dur-long) var(--ease-out) forwards;
+  animation-delay: calc(var(--i, 0) * 80ms);
+}
+
+/* Bento Grid System */
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--gap-bento);
+  grid-auto-rows: minmax(140px, auto);
+}
+
+.cell {
+  background: var(--color-paper-2);
+  border: 1px solid var(--color-rule);
+  border-radius: 12px;
+  padding: 1.5rem;
+  overflow: hidden;
+  position: relative;
+  transition: transform var(--dur-short) var(--ease-out), border-color var(--dur-short) var(--ease-out);
+}
+
+.cell:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.span-1x1 { grid-column: span 1; grid-row: span 1; }
+.span-2x1 { grid-column: span 2; grid-row: span 1; }
+.span-1x2 { grid-column: span 1; grid-row: span 2; }
+.span-2x2 { grid-column: span 2; grid-row: span 2; }
+.span-4x1 { grid-column: span 4; grid-row: span 1; }
+
+@media (max-width: 768px) {
+  .bento-grid { grid-template-columns: repeat(2, 1fr); }
+  .span-4x1 { grid-column: span 2; }
+  .span-2x2 { grid-column: span 2; }
+  .span-2x1 { grid-column: span 2; }
+}
+
+@media (max-width: 480px) {
+  .bento-grid { grid-template-columns: 1fr; }
+  .span-4x1, .span-2x2, .span-2x1, .span-1x2, .span-1x1 { grid-column: span 1; grid-row: auto; }
 }
 
 html {
