@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { Inter, Fira_Code } from "next/font/google";
 import Header from "@/components/Header";
+import HeroFrame from "@/components/HeroFrame";
 import Body from "@/components/Body";
 import Subheader from "@/components/Subheader";
 import ChatWidget from "@/components/ChatWidget";
@@ -12,26 +13,33 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Aahad Aazar | Software Engineer</title>
+        <title>Aahad Aazar | Product Engineer</title>
         <meta
           name="description"
-          content="Aahad Aazar - Full Stack Software Engineer Portfolio"
+          content="Aahad Aazar is a Product Engineer with Software Engineering, Data Engineering, and AI Engineering expertise."
         />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
       </Head>
       <main
-        className={`${inter.variable} ${firaCode.variable} font-sans min-h-screen bg-paper text-ink selection:bg-accent/30 overflow-x-hidden`}
+        id="main-content"
+        className={`${inter.variable} ${firaCode.variable} min-h-screen bg-paper font-sans text-ink selection:bg-accent/30`}
       >
-        <div className="max-w-5xl mx-auto px-4 py-12 flex flex-col min-h-screen relative z-10">
-          <header className="hero-fixed mb-12 flex flex-col items-center justify-center reveal" style={{ '--i': 0 }}>
+        <a
+          href="#selected-work"
+          className="fixed left-4 top-4 z-[100] -translate-y-24 rounded-md bg-ink px-4 py-3 text-sm font-medium text-paper transition-transform focus:translate-y-0"
+        >
+          Skip to selected work
+        </a>
+        <div className="page-shell relative z-10 mx-auto flex min-h-screen max-w-6xl flex-col px-4 py-6 sm:px-6 md:py-10">
+          <HeroFrame>
             <Header />
             <Subheader />
-          </header>
-          
+          </HeroFrame>
+
           <Body />
-          <ChatWidget />
         </div>
+        <ChatWidget />
       </main>
     </>
   );

@@ -1,0 +1,203 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-08T08:25:17Z",
+  "title": "Design System: Aahad Aazar",
+  "extensions": {
+    "colorMeta": {
+      "signal-blue": {
+        "role": "primary",
+        "displayName": "Signal Blue",
+        "canonical": "oklch(38% 0.135 250)",
+        "tonalRamp": ["oklch(15% 0.060 250)", "oklch(25% 0.095 250)", "oklch(38% 0.135 250)", "oklch(48% 0.125 250)", "oklch(60% 0.105 250)", "oklch(72% 0.080 250)", "oklch(84% 0.045 250)", "oklch(95% 0.018 250)"]
+      },
+      "signal-blue-dark": {
+        "role": "primary",
+        "displayName": "Signal Blue — Dark",
+        "canonical": "oklch(62% 0.115 250)",
+        "tonalRamp": ["oklch(15% 0.050 250)", "oklch(26% 0.075 250)", "oklch(38% 0.100 250)", "oklch(50% 0.115 250)", "oklch(62% 0.115 250)", "oklch(73% 0.075 250)", "oklch(84% 0.042 250)", "oklch(95% 0.016 250)"]
+      },
+      "cool-paper": {
+        "role": "neutral",
+        "displayName": "Cool Paper",
+        "canonical": "oklch(94% 0.008 245)",
+        "tonalRamp": ["oklch(15% 0.008 245)", "oklch(27% 0.008 245)", "oklch(39% 0.008 245)", "oklch(51% 0.008 245)", "oklch(63% 0.008 245)", "oklch(75% 0.008 245)", "oklch(87% 0.008 245)", "oklch(95% 0.008 245)"]
+      },
+      "archive-sheet": {
+        "role": "neutral",
+        "displayName": "Archive Sheet",
+        "canonical": "oklch(91% 0.010 245)",
+        "tonalRamp": ["oklch(15% 0.010 245)", "oklch(27% 0.010 245)", "oklch(39% 0.010 245)", "oklch(51% 0.010 245)", "oklch(63% 0.010 245)", "oklch(75% 0.010 245)", "oklch(87% 0.010 245)", "oklch(95% 0.010 245)"]
+      },
+      "pressed-sheet": {
+        "role": "neutral",
+        "displayName": "Pressed Sheet",
+        "canonical": "oklch(86% 0.012 240)",
+        "tonalRamp": ["oklch(15% 0.012 240)", "oklch(27% 0.012 240)", "oklch(39% 0.012 240)", "oklch(51% 0.012 240)", "oklch(63% 0.012 240)", "oklch(75% 0.012 240)", "oklch(87% 0.012 240)", "oklch(95% 0.012 240)"]
+      },
+      "slate-rule": {
+        "role": "neutral",
+        "displayName": "Slate Rule",
+        "canonical": "oklch(74% 0.012 240)",
+        "tonalRamp": ["oklch(15% 0.012 240)", "oklch(27% 0.012 240)", "oklch(39% 0.012 240)", "oklch(51% 0.012 240)", "oklch(63% 0.012 240)", "oklch(75% 0.012 240)", "oklch(87% 0.012 240)", "oklch(95% 0.012 240)"]
+      },
+      "quiet-slate": {
+        "role": "neutral",
+        "displayName": "Quiet Slate",
+        "canonical": "oklch(46% 0.014 245)",
+        "tonalRamp": ["oklch(15% 0.014 245)", "oklch(27% 0.014 245)", "oklch(39% 0.014 245)", "oklch(51% 0.014 245)", "oklch(63% 0.014 245)", "oklch(75% 0.014 245)", "oklch(87% 0.014 245)", "oklch(95% 0.014 245)"]
+      },
+      "deep-slate": {
+        "role": "neutral",
+        "displayName": "Deep Slate",
+        "canonical": "oklch(28% 0.016 245)",
+        "tonalRamp": ["oklch(15% 0.016 245)", "oklch(27% 0.016 245)", "oklch(39% 0.016 245)", "oklch(51% 0.016 245)", "oklch(63% 0.016 245)", "oklch(75% 0.016 245)", "oklch(87% 0.016 245)", "oklch(95% 0.016 245)"]
+      },
+      "graphite-ink": {
+        "role": "neutral",
+        "displayName": "Graphite Ink",
+        "canonical": "oklch(16% 0.020 245)",
+        "tonalRamp": ["oklch(15% 0.020 245)", "oklch(27% 0.020 245)", "oklch(39% 0.020 245)", "oklch(51% 0.018 245)", "oklch(63% 0.015 245)", "oklch(75% 0.012 245)", "oklch(87% 0.009 245)", "oklch(95% 0.006 245)"]
+      },
+      "night-paper": {
+        "role": "neutral",
+        "displayName": "Night Paper",
+        "canonical": "oklch(14% 0.008 245)",
+        "tonalRamp": ["oklch(15% 0.008 245)", "oklch(27% 0.008 245)", "oklch(39% 0.008 245)", "oklch(51% 0.008 245)", "oklch(63% 0.008 245)", "oklch(75% 0.008 245)", "oklch(87% 0.008 245)", "oklch(95% 0.008 245)"]
+      },
+      "night-sheet": {
+        "role": "neutral",
+        "displayName": "Night Sheet",
+        "canonical": "oklch(18% 0.010 245)",
+        "tonalRamp": ["oklch(15% 0.010 245)", "oklch(27% 0.010 245)", "oklch(39% 0.010 245)", "oklch(51% 0.010 245)", "oklch(63% 0.010 245)", "oklch(75% 0.010 245)", "oklch(87% 0.010 245)", "oklch(95% 0.010 245)"]
+      },
+      "night-rule": {
+        "role": "neutral",
+        "displayName": "Night Rule",
+        "canonical": "oklch(32% 0.012 245)",
+        "tonalRamp": ["oklch(15% 0.012 245)", "oklch(27% 0.012 245)", "oklch(39% 0.012 245)", "oklch(51% 0.012 245)", "oklch(63% 0.012 245)", "oklch(75% 0.012 245)", "oklch(87% 0.012 245)", "oklch(95% 0.012 245)"]
+      },
+      "night-muted": {
+        "role": "neutral",
+        "displayName": "Night Muted",
+        "canonical": "oklch(60% 0.010 245)",
+        "tonalRamp": ["oklch(15% 0.010 245)", "oklch(27% 0.010 245)", "oklch(39% 0.010 245)", "oklch(51% 0.010 245)", "oklch(63% 0.010 245)", "oklch(75% 0.010 245)", "oklch(87% 0.010 245)", "oklch(95% 0.010 245)"]
+      },
+      "chalk-ink": {
+        "role": "neutral",
+        "displayName": "Chalk Ink",
+        "canonical": "oklch(94% 0.006 245)",
+        "tonalRamp": ["oklch(15% 0.006 245)", "oklch(27% 0.006 245)", "oklch(39% 0.006 245)", "oklch(51% 0.006 245)", "oklch(63% 0.006 245)", "oklch(75% 0.006 245)", "oklch(87% 0.006 245)", "oklch(95% 0.006 245)"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "The centered name wordmark only." },
+      "headline": { "displayName": "Headline", "purpose": "Section and major card headings." },
+      "title": { "displayName": "Title", "purpose": "Company, project, and article titles." },
+      "body": { "displayName": "Body", "purpose": "Descriptions and supporting explanation." },
+      "label": { "displayName": "Technical Label", "purpose": "Roles, dates, technologies, and compact UI chrome." }
+    },
+    "shadows": [
+      { "name": "control-lift", "value": "0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)", "purpose": "Theme-switch thumb only." },
+      { "name": "floating-utility", "value": "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)", "purpose": "Fixed assistant launcher." },
+      { "name": "overlay-depth", "value": "0 25px 50px -12px rgb(0 0 0 / 0.25)", "purpose": "Open assistant panel only." }
+    ],
+    "motion": [
+      { "name": "ease-out", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Default entrance and state-change easing." },
+      { "name": "ease-in", "value": "cubic-bezier(0.7, 0, 0.84, 0)", "purpose": "Reserved acceleration curve." },
+      { "name": "ease-in-out", "value": "cubic-bezier(0.65, 0, 0.35, 1)", "purpose": "Symmetric state transitions." },
+      { "name": "micro", "value": "120ms", "purpose": "Icon and color feedback." },
+      { "name": "short", "value": "220ms", "purpose": "Card and control hover transitions." },
+      { "name": "long", "value": "420ms", "purpose": "Reveal, theme-thumb, and assistant transitions." },
+      { "name": "reveal-stagger", "value": "80ms per item", "purpose": "Sequenced first-render reveal." }
+    ],
+    "breakpoints": [
+      { "name": "single-column", "value": "480px" },
+      { "name": "two-column", "value": "768px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Wordmark",
+      "kind": "custom",
+      "description": "The centered Fira Code identity lockup with its Signal Blue cursor.",
+      "html": "<div class=\"ds-wordmark\"><div class=\"ds-wordmark-name\">Aahad Aazar<span>_</span></div><div class=\"ds-wordmark-labels\">PRODUCT ENGINEER <b>•</b> DATA <b>•</b> AI</div></div>",
+      "css": ".ds-wordmark { text-align: center; color: var(--color-ink); } .ds-wordmark-name { font-family: var(--font-fira), ui-monospace, monospace; font-size: 2.25rem; line-height: 1.11; font-weight: 500; letter-spacing: -0.05em; } .ds-wordmark-name span { color: var(--color-accent); margin-left: 0.25rem; } .ds-wordmark-labels { margin-top: 1rem; color: var(--color-muted); font-family: var(--font-fira), ui-monospace, monospace; font-size: 0.75rem; letter-spacing: 0.1em; } .ds-wordmark-labels b { margin: 0 0.75rem; color: var(--color-rule); font-weight: 400; }"
+    },
+    {
+      "name": "Bento Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "The flat, rule-bound Archive Sheet container used throughout the portfolio.",
+      "html": "<article class=\"ds-card\"><h3>System title</h3><p>Concise evidence and context belong here.</p></article>",
+      "css": ".ds-card { background: var(--color-paper-2); color: var(--color-ink); border: 1px solid var(--color-rule); border-radius: 12px; padding: 24px; transition: transform var(--dur-short, 220ms) var(--ease-out, ease), border-color var(--dur-short, 220ms) var(--ease-out, ease); } .ds-card:hover { transform: translateY(-2px); border-color: var(--color-accent); } .ds-card:focus-within { outline: 2px solid var(--color-focus, var(--color-accent)); outline-offset: 3px; } .ds-card h3 { margin: 0 0 8px; font: 500 1.125rem/1.5 var(--font-inter), ui-sans-serif, sans-serif; } .ds-card p { margin: 0; color: var(--color-muted); font: 400 0.875rem/1.625 var(--font-inter), ui-sans-serif, sans-serif; }"
+    },
+    {
+      "name": "Technology Chip",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "A compact technical label for skills and project technologies.",
+      "html": "<span class=\"ds-chip\">FastAPI</span>",
+      "css": ".ds-chip { display: inline-flex; align-items: center; padding: 4px 10px; border: 1px solid var(--color-rule); border-radius: 4px; background: var(--color-paper); color: var(--color-muted); font: 400 0.75rem/1.333 var(--font-fira), ui-monospace, monospace; transition: color var(--dur-micro, 120ms) ease, border-color var(--dur-micro, 120ms) ease; } .ds-chip:hover { color: var(--color-ink); border-color: var(--color-accent); } .ds-chip:focus-visible { outline: 2px solid var(--color-focus, var(--color-accent)); outline-offset: 2px; }"
+    },
+    {
+      "name": "Social Dock",
+      "kind": "nav",
+      "refersTo": "icon-dock",
+      "description": "The pill-shaped cluster for external profiles and theme control.",
+      "html": "<nav class=\"ds-dock\" aria-label=\"Portfolio links\"><a href=\"#\" aria-label=\"Email\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><rect x=\"3\" y=\"5\" width=\"18\" height=\"14\" rx=\"2\"/><path d=\"m3 7 9 6 9-6\"/></svg></a><span></span><button aria-label=\"Toggle theme\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"4\"/><path d=\"M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41\"/></svg></button></nav>",
+      "css": ".ds-dock { display: inline-flex; align-items: center; gap: 16px; padding: 12px; border: 1px solid var(--color-rule); border-radius: 9999px; background: color-mix(in oklch, var(--color-paper-2) 92%, transparent); backdrop-filter: blur(12px); } .ds-dock a, .ds-dock button { display: grid; place-items: center; padding: 0; width: 24px; height: 24px; border: 0; background: transparent; color: var(--color-muted); cursor: pointer; transition: color var(--dur-micro, 120ms) var(--ease-out, ease); } .ds-dock a:hover, .ds-dock button:hover { color: var(--color-accent); } .ds-dock a:focus-visible, .ds-dock button:focus-visible { outline: 2px solid var(--color-focus, var(--color-accent)); outline-offset: 3px; border-radius: 9999px; } .ds-dock svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; } .ds-dock > span { width: 1px; height: 16px; background: var(--color-rule); }"
+    },
+    {
+      "name": "Theme Switch",
+      "kind": "button",
+      "description": "The compact day/night control with a translating icon thumb.",
+      "html": "<button class=\"ds-theme\" aria-label=\"Toggle theme\"><span><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"4\"/><path d=\"M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41\"/></svg></span></button>",
+      "css": ".ds-theme { position: relative; display: flex; align-items: center; width: 48px; height: 24px; padding: 4px; border: 0; border-radius: 9999px; background: var(--color-rule); cursor: pointer; transition: background var(--dur-short, 220ms) var(--ease-out, ease); } .ds-theme span { display: grid; place-items: center; width: 16px; height: 16px; border-radius: 9999px; background: var(--color-paper); color: var(--color-ink); box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); transition: transform var(--dur-long, 420ms) var(--ease-out, ease); } .ds-theme:hover { background: var(--color-neutral); } .ds-theme:focus-visible { outline: 2px solid var(--color-focus, var(--color-accent)); outline-offset: 3px; } .ds-theme svg { width: 10px; height: 10px; fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; }"
+    },
+    {
+      "name": "Section Divider",
+      "kind": "custom",
+      "description": "A borderless rhythm reset that labels the next bento group.",
+      "html": "<div class=\"ds-section\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z\"/><path d=\"M4 5.5v14\"/></svg><h2>Latest Writing</h2><span></span></div>",
+      "css": ".ds-section { display: flex; align-items: center; gap: 12px; width: 100%; color: var(--color-ink); } .ds-section svg { width: 20px; height: 20px; fill: none; stroke: var(--color-accent); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; } .ds-section h2 { margin: 0; font: 500 1.25rem/1.75 var(--font-inter), ui-sans-serif, sans-serif; letter-spacing: -0.025em; } .ds-section span { flex: 1; height: 1px; margin-left: 16px; background: var(--color-rule); }"
+    },
+    {
+      "name": "AI Assistant Launcher",
+      "kind": "button",
+      "refersTo": "chat-launcher",
+      "description": "The sole high-elevation action, fixed above the document plane.",
+      "html": "<button class=\"ds-chat\" aria-label=\"Open Aahad AI Assistant\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z\"/></svg></button>",
+      "css": ".ds-chat { display: grid; place-items: center; width: 56px; height: 56px; padding: 16px; border: 1px solid var(--color-rule); border-radius: 9999px; background: var(--color-paper-2); color: var(--color-ink); box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); cursor: pointer; transition: color var(--dur-short, 220ms) var(--ease-out, ease), border-color var(--dur-short, 220ms) var(--ease-out, ease), transform var(--dur-micro, 120ms) var(--ease-out, ease); } .ds-chat:hover { color: var(--color-accent); border-color: var(--color-accent); transform: translateY(-2px); } .ds-chat:focus-visible { outline: 2px solid var(--color-focus, var(--color-accent)); outline-offset: 4px; } .ds-chat svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Product Engineer's Almanac",
+    "overview": "The portfolio behaves like a carefully maintained technical almanac: a cool-paper record where experience, systems, projects, and writing accumulate into one inspectable body of evidence. Its restraint gives the work authority; its bento composition makes different kinds of expertise legible without flattening them into a résumé table.\n\nThe voice is curious, practical, and collaborative, but never tentative. Confidence comes through lucid structure, specific technical detail, and the quiet rhythm of Inter paired with Fira Code. Creative departures are welcome when they illuminate software, data, AI, or product thinking; decoration without that connection does not belong.",
+    "keyCharacteristics": [
+      "Cool, paper-like surfaces with a complete dark counterpart.",
+      "A four-column bento field that collapses deliberately to two columns and then one.",
+      "Inter for explanatory content and Fira Code for identity, metadata, and technical signals.",
+      "Signal Blue used sparingly to orient attention and identify interaction.",
+      "Creativity tied to engineering content, behavior, or evidence rather than fashionable decoration."
+    ],
+    "rules": [
+      { "name": "The Signal Discipline Rule", "body": "Signal Blue identifies meaning or interaction; it is never a general-purpose wash, decorative glow, or large background field.", "section": "colors" },
+      { "name": "The Two-Voice Rule", "body": "Inter explains; Fira Code identifies, indexes, or signals technical context. Do not set long descriptive passages in monospace.", "section": "typography" },
+      { "name": "The Tonal Structure Rule", "body": "Cards stay flat at rest; reserve visible shadows and blur for controls that truly float above the document.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do make creative choices earn their place by revealing engineering work, product thinking, data relationships, or meaningful interaction.",
+      "Do preserve the paper-and-ink hierarchy, with Signal Blue acting as a scarce navigational and semantic cue.",
+      "Do vary bento spans according to information weight and keep the mobile collapse intentional.",
+      "Do use precise details—labels, states, transitions, and evidence—to create personality.",
+      "Do honor reduced-motion preferences and keep icon-only controls accessible by name."
+    ],
+    "donts": [
+      "Don't default to generic AI-portfolio motifs such as gradient-mesh heroes, neon orbs, code rain, faux terminal windows, or decorative 3D objects.",
+      "Don't introduce glass panels, glows, shadows, or gradients unless they communicate a real layer, state, or product concept.",
+      "Don't turn every idea into an equal rounded card; preserve hierarchy through scale, span, whitespace, and selective border removal.",
+      "Don't decorate with invented metrics, client logos, dashboards, testimonials, or technical claims.",
+      "Don't confuse software-engineering creativity with cyberpunk styling; this portfolio should feel authored, credible, and specific to Aahad's work."
+    ]
+  }
+}
